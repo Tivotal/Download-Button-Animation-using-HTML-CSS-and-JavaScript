@@ -1,0 +1,120 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+
+.wrapper {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  background: #555;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+}
+
+.wrapper .button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.wrapper .button.anim {
+  animation: btnAnim 1s linear;
+}
+
+@keyframes btnAnim {
+  0% {
+    top: 110%;
+  }
+  20% {
+    top: 110%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.wrapper.load {
+  width: 600px;
+  height: 15px;
+}
+
+.wrapper.load .loader {
+  width: 100%;
+  height: 100%;
+  background: #008000;
+  animation: loadAnim 3s linear;
+}
+
+@keyframes loadAnim {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.wrapper.check {
+  width: 80px;
+  height: 80px;
+  background: #008000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper.check .check {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transform: scale(1);
+  animation: checkAnim 1s linear;
+}
+
+.wrapper.check .check i {
+  font-size: 35px;
+  color: #fff;
+}
+
+@keyframes checkAnim {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
